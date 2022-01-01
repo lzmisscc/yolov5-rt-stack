@@ -34,9 +34,6 @@ def run(
     weights: str = "yolort.engine",
     source: str = "bus.jpg",
     img_size: Tuple[int, int] = (640, 640),
-    conf_thres: float = 0.25,
-    iou_thres: float = 0.45,
-    max_det: int = 1000,
     device: str = "",
     view_img: bool = False,
     save_txt: bool = False,
@@ -211,9 +208,6 @@ def get_parser():
     parser.add_argument("--weights", type=str, default="yolov5s.pt", help="model path(s)")
     parser.add_argument("--source", type=str, default="data/images", help="file/dir/URL/glob, 0 for webcam")
     parser.add_argument("--img_size", nargs="+", type=int, default=[640], help="inference size h,w")
-    parser.add_argument("--conf_thres", type=float, default=0.25, help="confidence threshold")
-    parser.add_argument("--iou_thres", type=float, default=0.45, help="NMS IoU threshold")
-    parser.add_argument("--max_det", type=int, default=1000, help="maximum detections per image")
     parser.add_argument("--device", default="", help="cuda device, i.e. 0 or 0,1,2,3 or cpu")
     parser.add_argument("--view_img", action="store_true", help="show results")
     parser.add_argument("--save_txt", action="store_true", help="save results to *.txt")
