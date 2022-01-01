@@ -130,7 +130,7 @@ def cli_main():
     assert checkpoint_path.exists(), f"Not found checkpoint file at '{checkpoint_path}'"
 
     image_size = args.image_size
-    image_size *= 2 if len(args.image_size) == 1 else 1  # auto expand
+    image_size *= 2 if len(image_size) == 1 else 1  # auto expand
 
     if args.skip_preprocess:
         # input data
